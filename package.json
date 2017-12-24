@@ -1,0 +1,25 @@
+{
+  "name": "mongoose-graphql",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon src/app --exec babel-node --presets env"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "nodemon": "^1.14.3"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.4",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "express-graphql": "^0.6.11",
+    "graphql": "^0.12.3",
+    "jsonwebtoken": "^8.1.0",
+    "mongoose": "^4.13.7",
+    "validator": "^9.2.0"
+  }
+}
