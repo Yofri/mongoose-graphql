@@ -1,9 +1,8 @@
-import express from 'express'
-import bodyParser from 'body-parser'
-import mongoose from 'mongoose'
-import graphqlHTTP from 'express-graphql'
-import Todo from './models/todo'
-import Schema from './graphql'
+const express = require('express')
+const bodyParser = require('body-parser')
+const mongoose = require('mongoose')
+const graphqlHTTP = require('express-graphql')
+const Schema = require('./controllers')
 
 mongoose.connect('mongodb://localhost:27017/todo', {useMongoClient: true})
 mongoose.Promise = global.Promise
@@ -15,18 +14,8 @@ const db = mongoose.connection
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
-app.post('/api/todos', async (req, res) => {
-  try {
-    const todo = await Todo.create(req.body)
-    res.status(200).send(todo)
-  } catch (err) {
-    res.status(500).send(err)
-  }
-})
-
 app.use('/graphql', graphqlHTTP({
   schema: Schema,
-  pretty: true,
   graphiql: true
 }))
 

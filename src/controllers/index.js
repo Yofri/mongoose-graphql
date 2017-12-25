@@ -1,11 +1,11 @@
-import {
+const {
   GraphQLSchema,
   GraphQLObjectType
-} from 'graphql'
-import queries from './queries'
-import mutations from './mutations'
+} = require('graphql')
+const queries = require('./queries')
+const mutations = require('./mutations')
 
-export default new GraphQLSchema({
+module.exports = new GraphQLSchema({
   query: new GraphQLObjectType({
     name: 'Query',
     fields: queries

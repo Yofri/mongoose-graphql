@@ -1,6 +1,7 @@
-import mongoose from 'mongoose'
+const mongoose = require('mongoose')
+
 module.exports = mongoose.model('Todo', {
-  userId: {
+  uid: {
     type: mongoose.Schema.Types.ObjectId,
     required: true
   },

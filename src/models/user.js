@@ -1,7 +1,12 @@
-import mongoose from 'mongoose'
-import isEmail from 'validator/lib/isEmail'
+const mongoose = require('mongoose')
+const isEmail = require('validator/lib/isEmail')
 
 module.exports = mongoose.model('User', {
+  name: {
+    type: String,
+    required: true,
+    trim: true
+  },
   email: {
     type: String,
     required: true,
