@@ -1,4 +1,4 @@
-import listUsers from './lists'
+import allUsers from './lists'
 import findUser from './find'
 
-export {listUsers, findUser}
+export {allUsers, findUser}

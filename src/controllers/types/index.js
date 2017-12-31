@@ -1,3 +1,4 @@
 import UserType from './user'
+import TodoType from './todo'
 
-export {UserType}
+export {UserType, TodoType}

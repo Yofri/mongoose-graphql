@@ -1,3 +1,7 @@
-import {listUsers, findUser} from './user'
+import {allUsers, findUser} from './user'
+import {allTodos, findTodo} from './todo'
 
-export {listUsers, findUser}
+export {
+  allUsers, findUser,
+  allTodos, findTodo
+}

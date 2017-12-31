@@ -2,14 +2,14 @@ import {
   GraphQLSchema,
   GraphQLObjectType
 } from 'graphql'
-import {listUsers, findUser} from './queries'
+import {allUsers, findUser} from './queries'
 import {createUser, updateUser, removeUser, login} from './mutations'
 
 export default new GraphQLSchema({
   query: new GraphQLObjectType({
     name: 'Query',
     fields: {
-      listUsers, findUser
+      allUsers, findUser
     }
   }),
   mutation: new GraphQLObjectType({

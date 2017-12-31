@@ -3,6 +3,4 @@ import updateUser from './update'
 import removeUser from './remove'
 import login from './login'
 
-export {
-  createUser, updateUser, removeUser, login
-}
+export {createUser, updateUser, removeUser, login}
