@@ -1,3 +1,3 @@
-const UserType = require('./user')
+import UserType from './user'
 
-module.exports = UserType
+export {UserType}

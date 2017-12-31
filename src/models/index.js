@@ -1,7 +1,3 @@
-const User = require('./user')
-const Todo = require('./todo')
+import User from './user'
 
-module.exports = {
-  User,
-  Todo
-}
+export {User}

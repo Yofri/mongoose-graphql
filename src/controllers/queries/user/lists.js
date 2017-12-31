@@ -1,14 +1,10 @@
-const {GraphQLList} = require('graphql')
-const {User} = require('../../../models')
-const {UserType} = require('../../types')
+import {GraphQLList} from 'graphql'
+import {User} from '../../../models'
+import {UserType} from '../../types'
 
 module.exports = {
   type: new GraphQLList(UserType),
-  resolve: () => {
-    return new Promise((resolve, reject) => {
-      User.find((err, users) => {
-        err ? reject(err) : resolve(users)
-      })
-    })
+  resolve: async () => {
+    return await User.find()
   }
 }

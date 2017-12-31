@@ -1,19 +1,16 @@
-const {
-  GraphQLNonNull,
-  GraphQLID
-} = require('graphql')
-const {User} = require('../../../models')
-const {UserType, UserInputType} = require('../../types')
+import {GraphQLNonNull, GraphQLID, GraphQLString} from 'graphql'
+import {User} from '../../../models'
+import {UserType} from '../../types'
 
-module.exports = {
+export default {
   type: UserType,
   args: {
     id: {type: new GraphQLNonNull(GraphQLID)},
-    body: {type: UserInputType}
+    name: {type: GraphQLString},
+    email: {type: GraphQLString},
+    password: {type: GraphQLString}
   },
-  resolve(root, {id, body}) {
+  resolve: async (root, {id, body}) => {
     return User.findByIdAndUpdate(id, body)
-      .then(res => res)
-      .catch(err => err)
   }
 }

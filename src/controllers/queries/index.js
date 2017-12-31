@@ -1,3 +1,3 @@
-const queryUser = require('./user')
+import {listUsers, findUser} from './user'
 
-module.exports = queryUser
+export {listUsers, findUser}

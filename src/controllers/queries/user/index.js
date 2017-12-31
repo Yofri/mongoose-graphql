@@ -1,5 +1,4 @@
-const listsUser = require('./lists')
+import listUsers from './lists'
+import findUser from './find'
 
-module.exports = {
-  listsUser
-}
+export {listUsers, findUser}

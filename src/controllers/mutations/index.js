@@ -1,3 +1,5 @@
-const mutateUser = require('./user')
+import {createUser, updateUser, removeUser, login} from './user'
 
-module.exports = mutateUser
+export {
+  createUser, updateUser, removeUser, login
+}

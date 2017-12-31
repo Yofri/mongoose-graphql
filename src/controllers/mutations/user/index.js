@@ -1,9 +1,8 @@
-const createUser = require('./create')
-const updateUser = require('./update')
-const removeUser = require('./remove')
+import createUser from './create'
+import updateUser from './update'
+import removeUser from './remove'
+import login from './login'
 
-module.exports = {
-  createUser,
-  updateUser,
-  removeUser
+export {
+  createUser, updateUser, removeUser, login
 }
