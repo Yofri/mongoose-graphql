@@ -6,7 +6,7 @@ import {User} from '../../../models'
 import {UserType} from '../../types'
 
 module.exports = {
-  type: UserType,
+  type: new GraphQLNonNull(UserType),
   args: {
     id: {type: new GraphQLNonNull(GraphQLID)}
   },

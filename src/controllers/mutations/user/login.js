@@ -5,7 +5,7 @@ import {User} from '../../../models'
 import {UserType} from '../../types'
 
 export default {
-  type: UserType,
+  type: new GraphQLNonNull(UserType),
   args: {
     email: {type: new GraphQLNonNull(GraphQLString)},
     password: {type: new GraphQLNonNull(GraphQLString)}

@@ -3,7 +3,7 @@ import {Todo} from '../../../models'
 import {TodoType} from '../../types'
 
 export default {
-  type: TodoType,
+  type: new GraphQLNonNull(TodoType),
   args: {
     id: {type: new GraphQLNonNull(GraphQLID)}
   },
