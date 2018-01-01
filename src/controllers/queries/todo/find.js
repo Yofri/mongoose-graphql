@@ -4,6 +4,7 @@ import {
 } from 'graphql'
 import {Todo} from '../../../models'
 import {TodoType} from '../../types'
+import {getProjection} from '../../../utils'
 
 module.exports = {
   type: new GraphQLNonNull(TodoType),
@@ -11,6 +12,7 @@ module.exports = {
     id: {type: new GraphQLNonNull(GraphQLID)}
   },
   resolve: async (root, {id}) => {
-    return await Todo.findById(id)
+    const projection = getProjection(fieldASTs)
+    return await Todo.findById(id).select(projection)
   }
 }
